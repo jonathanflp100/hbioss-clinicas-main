@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sistema de Design Empresarial - Cores, gradientes, fontes, etc. 
+Todas as cores devem ser HSL.
+*/
+
+@layer base {
+  :root {
+    /* Fundo e superfícies - tema escuro profissional */
+    --background: 220 15% 6%;
+    --foreground: 0 0% 98%;
+    --surface: 220 15% 8%;
+    --surface-elevated: 220 15% 10%;
+
+    /* Cards e containers */
+    --card: 220 15% 8%;
+    --card-foreground: 0 0% 98%;
+    --card-elevated: 220 15% 10%;
+
+    /* Popover e modais */
+    --popover: 220 15% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Cores principais HBIOSS - azul/teal */
+    --primary: 195 100% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 195 100% 30%;
+    --primary-muted: 195 100% 25% / 0.1;
+
+    /* Cores secundárias */
+    --secondary: 220 15% 12%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-hover: 220 15% 15%;
+
+    /* Estados e feedback */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 98%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Texto neutro */
+    --muted: 220 15% 20%;
+    --muted-foreground: 220 10% 65%;
+    --subtle: 220 15% 16%;
+    --subtle-foreground: 220 10% 84%;
+
+    /* Accent e destaque */
+    --accent: 220 15% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    /* Bordas e inputs */
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 195 100% 25%;
+
+    /* Gradientes HBIOSS */
+    --gradient-primary: linear-gradient(135deg, hsl(195 100% 25%), hsl(195 100% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 15% 12%), hsl(220 15% 20%));
+    --gradient-success: linear-gradient(135deg, hsl(142 71% 45%), hsl(158 64% 52%));
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px hsl(220 15% 6% / 0.05);
+    --shadow-md: 0 4px 6px hsl(220 15% 6% / 0.1);
+    --shadow-lg: 0 10px 15px hsl(220 15% 6% / 0.15);
+    --shadow-xl: 0 20px 25px hsl(220 15% 6% / 0.25);
+    --shadow-glow: 0 0 30px hsl(195 100% 25% / 0.3);
+
+    --radius: 0.75rem;
+
+    /* Charts HBIOSS */
+    --chart-1: 195 100% 50%;
+    --chart-2: 142 71% 45%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 0 84% 60%;
+    --chart-5: 270 95% 60%;
+
+    /* Sidebar HBIOSS */
+    --sidebar-background: 220 15% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 195 100% 25%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 220 15% 18%;
+    --sidebar-ring: 195 100% 25%;
+  }
+
+  /* Tema claro HBIOSS (opcional para futuro) */
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 220 15% 15%;
+    --surface: 0 0% 98%;
+    --surface-elevated: 0 0% 96%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --card-elevated: 0 0% 98%;
+    
+    --primary: 195 100% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-hover: 195 100% 20%;
+    --primary-muted: 195 100% 25% / 0.1;
+    
+    --secondary: 220 15% 94%;
+    --secondary-foreground: 220 15% 15%;
+    --secondary-hover: 220 15% 90%;
+    
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 15% 45%;
+    --subtle: 220 15% 98%;
+    --subtle-foreground: 220 15% 25%;
+    
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 195 100% 25%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 15% 15%;
+    --sidebar-primary: 195 100% 25%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 220 15% 94%;
+    --sidebar-accent-foreground: 220 15% 15%;
+    --sidebar-border: 220 15% 88%;
+    --sidebar-ring: 195 100% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
